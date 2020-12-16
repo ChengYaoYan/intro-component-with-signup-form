@@ -1,0 +1,197 @@
+/*
+================
+Fonts
+================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*
+================
+Variables
+================
+*/
+:root {
+  --clr-red: hsl(0, 100%, 74%);
+  --clr-green: hsl(154, 59%, 51%);
+  --clr-light-green: hsl(154, 59%, 61%);
+  --clr-blue: hsl(248, 32%, 49%);
+  --clr-dark-blue: hsl(249, 10%, 26%);
+  --clr-grayish-blue: hsl(246, 25%, 77%);
+  --clr-white: #fff;
+  --clr-dark: #000;
+  --ff-primary: 'Poppins', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.05rem;
+  --radius: 0.5rem;
+  --dark-shadow: 0 10px 1px rgba(0, 0, 0, 0.2);  
+  --light-shadow: 0 3px 1px hsl(154, 59%, 41%);
+  --max-width: 1440px;
+  --fixed-width: 720px;
+}
+
+/*
+================
+Global styles
+================
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  letter-spacing: 0.05rem;
+  line-height: 2.5rem;
+  font-family: var(--ff-primary);
+  margin-bottom: 1.2rem;
+}
+h1 {
+  font-size: 1rem;
+}
+p {
+  letter-spacing: 0.05rem;
+  line-height: 2rem;
+  font-family: var(--ff-primary);
+}
+p {
+  font-size: 1rem;
+}
+input {
+  display: block;
+  font-size: 1rem;
+  color: var(--clr-dark-blue);
+  font-weight: 600;
+  padding: 1.2rem 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 1px solid var(--clr-grayish-blue);
+  border-radius: var(--radius);
+}
+
+/* global classes */
+.btn {
+  display: block;
+  padding: 1.5rem 2rem 1rem;
+  font-size: 1rem;
+  background-color: var(--clr-green);
+  color: var(--clr-white);
+  border: transparent;
+  transition: var(--transition);
+  box-shadow: var(--light-shadow);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--clr-light-green);
+}
+main {
+  background: url(./images/bg-intro-mobile.png); 
+  background-color: var(--clr-red);
+  min-height: 100vh;
+  display: grid;
+  padding: 0 1.5rem;
+}
+@media screen and (min-width: 900px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    background: url(./images/bg-intro-desktop.png);
+    background-color: var(--clr-red);
+  }
+}
+
+/*
+=================
+Styles
+=================
+*/
+.slogan {
+  text-align: center;
+  margin: 5rem auto 0;
+  max-width: 600px;
+}
+.title {
+  font-size: 1.8rem;
+  color: var(--clr-white);
+  font-weight: 700;
+}
+.intro {
+  font-size: 1rem;
+  color: var(--clr-white);
+  font-weight: 400;
+  margin-bottom: 5rem;
+}
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 900px) {
+  .slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .intro {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.discount {
+  background-color: var(--clr-blue);
+  border: transparent;
+  box-shadow: var(--dark-shadow);
+  border-radius: var(--radius);
+  padding: 1rem 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.discount p {
+  font-size: 0.8rem;
+  color: var(--clr-white);
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.discount p span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.personal-information {
+  padding: 1.5rem 1.2rem;
+  background-color: var(--clr-white);
+  border: transparent;
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 900px) {
+  .personal-information {
+    margin-bottom: 0;
+  }
+}
+.tip {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--clr-grayish-blue);
+  line-height: 1.2rem;
+  text-align: center;
+  padding: 0 1.6rem;
+}
+.tip span {
+  font-size: 0.8rem;
+  color: var(--clr-red);
+  font-weight: 700;
+}
