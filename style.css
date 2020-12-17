@@ -70,6 +70,12 @@ input {
   border: 1px solid var(--clr-grayish-blue);
   border-radius: var(--radius);
 }
+/* input error */
+input.error {
+  outline-color: var(--clr-red);
+  color: var(--clr-red);
+  margin-bottom: 0;
+}
 
 /* global classes */
 .btn {
@@ -182,6 +188,9 @@ Styles
     margin-bottom: 0;
   }
 }
+.input-container {
+  position: relative;
+}
 .tip {
   font-size: 0.7rem;
   font-weight: 400;
@@ -194,4 +203,21 @@ Styles
   font-size: 0.8rem;
   color: var(--clr-red);
   font-weight: 700;
+}
+/* alert */
+.alert-text {
+  color: var(--clr-red);
+  text-align: right;
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+img.alert-flag {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: block;
 }
